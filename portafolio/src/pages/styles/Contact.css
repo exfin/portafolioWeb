@@ -1,0 +1,122 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.contact-links {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+.contact-container1 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgb(0,120,212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container2 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgb(110, 84, 148);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-container2 .contact-info:hover {
+    text-decoration: underline;
+}
+
+
+.contact-container3 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgb(37,211,102);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes popFromBottom {
+    0% {
+        transform: translateY(45%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to each container */
+.contact-container1, .contact-container2, .contact-container3 {
+    animation: popFromBottom 1s ease-out;
+}
+
+.icon {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .contact-links {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contact-container1 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .contact-container2 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .contact-container3 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    /* Define the animation */
+    @keyframes popFromLeft {
+        0% {
+            transform: translateX(-40%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* Apply the animation to each container */
+    .contact-container1, .contact-container2, .contact-container3 {
+        animation: popFromLeft 1s ease-out;
+    }
+
+}

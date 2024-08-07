@@ -1,0 +1,154 @@
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.projects-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.project-info1, .project-info2, .project-info3 {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-image1, .info-image2 {
+    height: 100%;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.info-image1 {
+    background-image: 
+        linear-gradient(to top, rgba(128, 128, 128, 0.892), rgba(128, 128, 128, 0.234)), 
+        url('../../assets/ImagenUEATSS.jpg');
+}
+
+.info-image2 {
+    background-image: 
+        linear-gradient(to top, rgba(128, 128, 128, 0.8), rgba(128, 128, 128, 0.138)), 
+        url('../../assets/Sitio-buses.png');
+}
+
+.info-text {
+    height: 90%;
+    width: 40%;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.info1 {
+    background-color: rgb(165, 143, 19);
+    padding: 20px;
+    width: 70%;
+    height: 90%;
+    position: relative;
+    left: 100px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.info2 {
+    background-color: rgb(19, 165, 19);
+    padding: 20px;
+    width: 70%;
+    height: 90%;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.icon1, .icon2 {
+    width: 100%;
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+
+.info2 div {
+    width: 100%;
+    height: 60%;
+    text-align: center;
+}
+
+.btn2 {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn2:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1100px) {
+    .project-info1, .project-info2 {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .info-image1, .info-image2 {
+        width: 100%;
+        height: 300px;
+    }
+
+    .info1, .info2 {
+        width: 90%; /* Keep them wide */
+        max-width: 600px; /* Ensure they don't exceed a certain width */
+        min-width: 300px; /* Set a minimum width */
+        height: auto;
+        margin-top: 20px;
+        left: 0;
+        top: 0;
+        margin-left: calc(50% - 45%); /* Adjusts the left margin to center more accurately */
+        margin-right: auto;
+        animation: none; /* Disable animation for small screens */
+    }
+}
