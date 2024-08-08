@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import  { Component } from 'react';
 import { Navbar } from '../components/Navbar';
 import { FaPhoneSquare } from "react-icons/fa";
 import { Footer } from '../components/Footer';
